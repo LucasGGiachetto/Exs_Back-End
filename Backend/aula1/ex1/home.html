@@ -1,39 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+- <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula_2</title>
+    <title>Aula 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <tbody>
-        <center>
-            <h1 id="titulo">Calculadora de Média</h1>
+    <h1 id="titulo">Calculadora de Média</h1>
 
-            <input type="text" id="nome" placeholder="Digite o seu nome: ">
-            <input type="number" id="n1" placeholder="Digite a primeira nota: ">
-            <input type="number" id="n2" placeholder="Digite a segunda nota: ">
-            <input type="number" id="n3" placeholder="Digite a terceira nota: ">
-            <input type="button" value="Cadastrar" id="botao" onclick="Cadastrar()">
+    <input type="text" id="nome" placeholder="Digite o seu nome" required>
+    <input type="number" id="n1" placeholder="Digite a 1ª Nota: " required>
+    <input type="number" id="n2" placeholder="Digite a 2ª Nota: " required>
+    <input type="number" id="n3" placeholder="Digite a 3ª Nota: " required>
+    <input type="submit" value="Cadastrar" id="botao" onclick="cadastrar()">
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Nota 1</th>
-                        <th>Nota 2</th>
-                        <th>Nota 3</th>
-                        <th>Média</th>
-                    </tr>
-                </thead>
-    </tbody id="tabela_resultado">
-    </table>
+    <center>
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Média</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody id="tabela_resultado">
+
+
+            </tbody>
+        </table>
     </center>
-
-
 </body>
 <script src="script.js"></script>
 
