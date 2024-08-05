@@ -1,0 +1,11 @@
+#deadpool {
+    width: 400px;
+    height: 300px;
+    border-radius: 0%;
+}
+
+#link {
+    font-size: 22px;
+    color: blue;
+    text-decoration: none;
+}
