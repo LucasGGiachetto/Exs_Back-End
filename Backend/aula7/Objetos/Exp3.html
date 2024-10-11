@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <p id="paragrafo"></p>
+</body>
+<script>
+    class Paciente {
+        nome = "";
+        peso = 0;
+        altura = 0;
+
+        calcIMC() {
+            return this.peso / (this.altura * this.altura);
+        }
+
+        
+        categoriaIMC() {
+            const imc = this.calcIMC();
+            if (imc < 18.5) {
+                return "Abaixo do peso";
+            } else if (imc >= 18.5 && imc < 24.9) {
+                return "Peso normal";
+            } else if (imc >= 25 && imc < 29.9) {
+                return "Sobrepeso";
+            } else {
+                return "Obesidade";
+            }
+        }
+    }
+
+    const p = document.querySelector("#paragrafo"); // Objeto HTML
+    const paciente = new Paciente(); // Criando o objeto sem o construtor
+
+    // Inicializando as propriedades diretamente
+    paciente.nome = "Lucas";
+    paciente.peso = 51;
+    paciente.altura = 1.74;
+
+    // Calculando o IMC e categoria
+    const imc = paciente.calcIMC();
+    const categoria = paciente.categoriaIMC();
+
+    // Exibindo os dados
+    p.innerHTML += "Nome: " + paciente.nome;
+    p.innerHTML += "<br>Peso: " + paciente.peso;
+    p.innerHTML += "<br>Altura: " + paciente.altura;
+    p.innerHTML += "<br>IMC: " + imc.toFixed(2); // IMC com 2 casas decimais
+    p.innerHTML += "<br>Categoria: " + categoria; // Exibe a categoria do IMC
+</script>
+</html>

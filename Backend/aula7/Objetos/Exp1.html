@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <p id="paragrafo"></p>
+</body>
+<script>
+    const obj={} //Objeto vazio
+    const fiat = {
+        modelo:"Uno",
+        cor:"Cinza",
+        placa:"AAA-1A11",
+        valor:20000.00,
+        desconto(porcentagem) {
+            return this.valor = desconto;
+        }
+    }
+    console.log(fiat.desconto(0.1));
+    const p = document.getElementById("paragrafo");
+    p.innerHTML = "Modelo: "+fiat.modelo;
+    p.innerHTML += "<br>Cor: "+fiat.cor;
+    p.innerHTML += "<br>Placa: "+fiat.placa;
+    p.innerHTML += "<br>Valor: "+fiat.valor.toFixed(2);
+</script>
+</html>

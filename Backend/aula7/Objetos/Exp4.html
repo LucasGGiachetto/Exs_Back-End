@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <p id="paragrafo"></p>
+</body>
+<script>
+    class Pedido {
+        // Propriedades do pedido
+        produto = "";
+        quantidade = 0;
+        precoUnitario = 0;
+
+        // Método para calcular o valor total do pedido
+        calcValorTotal() {
+            return this.quantidade * this.precoUnitario;
+        }
+    }
+
+    const p = document.querySelector("#paragrafo"); // Objeto HTML
+    const pedido = new Pedido(); // Criando o objeto Pedido sem o construtor
+
+    // Inicializando as propriedades diretamente
+    pedido.produto = "Camiseta";
+    pedido.quantidade = 3;
+    pedido.precoUnitario = 25.50;
+
+    // Exibindo os dados do pedido
+    p.innerHTML += "Produto: " + pedido.produto;
+    p.innerHTML += "<br>Quantidade: " + pedido.quantidade;
+    p.innerHTML += "<br>Preço Unitário: R$ " + pedido.precoUnitario.toFixed(2);
+    p.innerHTML += "<br>Valor Total: R$ " + pedido.calcValorTotal().toFixed(2); // Valor total com 2 casas decimais
+</script>
+</html>
